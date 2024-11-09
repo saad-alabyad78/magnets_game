@@ -1,0 +1,61 @@
+#grid {
+        display: grid;
+        grid-template-columns: repeat(5, 50px);
+        gap: 20px;
+        padding: 0;
+        margin-top: 20px;
+}
+
+.cell {
+        border-radius: 20px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+}
+
+.cell.empty {
+        border-radius: 0px;
+        background-color: lightgray;
+        /* Light color for empty cells */
+}
+
+.cell.red {
+        background-color: red;
+}
+
+.cell.blue {
+        background-color: blue;
+}
+
+.cell.gray {
+        background-color: gray;
+}
+
+.selected {
+        outline: 6px solid yellow;
+}
+
+.target{
+        outline: 3px solid purple;
+}
+
+.board{
+        margin-top: 20px;
+        font-family: monospace;
+        font-size: 25px;
+        color: purple;
+        padding: 20px;
+        display: inline-block;
+}
+#win{
+        margin-left: 90px;
+        display: inline;
+}
+#count{
+        margin-top: 70px;
+        margin-left: 50px;
+        display: inline;
+}
