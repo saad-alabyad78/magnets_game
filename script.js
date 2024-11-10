@@ -29,7 +29,6 @@ function bfs(node, maxCounts = 1000, maxDepth = 1) {
 
         //child => parent
         let parentTree = [];
-        let depthMap = [];
         let timeCount = 0;
         let visited = [];
 
@@ -40,7 +39,7 @@ function bfs(node, maxCounts = 1000, maxDepth = 1) {
         //console.log('-');
 
         while (!(queue.length === 0) && maxCounts >= timeCount) {
-                //  console.log('queue ', queue);
+                // console.log('queue ', queue);
 
                 timeCount++;
 
@@ -56,34 +55,6 @@ function bfs(node, maxCounts = 1000, maxDepth = 1) {
                 });
 
                 if (checkWin(currNode.grid, target)) {
-
-                        // solotionArray = [currNode];
-
-                        // console.log('solotion' , solotionArray) ;
-
-                        // let child = currNode;
-
-                        // while (gridToSting(child.grid) in parentTree) {
-                        //         let parent = parentTree[gridToSting(child.grid)];
-
-                        //         solotionArray.push(parent);
-
-                        //         child = parent;
-
-                        //         if (child === -1) break;
-                        // }
-
-                        // for (let i = solotionArray.length - 1; i >= 0; i--) {
-                        //         sleep(
-                        //                 1000 * (solotionArray.length - i)
-                        //                 +
-                        //                 smallSleep * (timeCount + 100)
-                        //         ).then(() => {
-                        //                 gridData = solotionArray[i].grid;
-                        //                 count = solotionArray.length - i;
-                        //                 renderGrid();
-                        //         });
-                        // }
 
                         sleep((smallSleep * timeCount + smallSleep)).then(() => {
                                 gridData = currNode.grid;
@@ -450,4 +421,4 @@ renderGrid();
 //         grid: JSON.parse(JSON.stringify(gridData)),
 //         depth: 0
 // }));
-console.log(dfs(JSON.parse(JSON.stringify(gridData))));
+//console.log(dfs(JSON.parse(JSON.stringify(gridData))));
